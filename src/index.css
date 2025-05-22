@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant rtl (&:where([dir="rtl"], [dir="rtl"] *));
+
+:root {
+  --gradient-pharmacy: linear-gradient(to right, #042904 0%, #265818 31%, #71BF44 100%);
+}
+
+@layer utilities {
+
+  /* Scrollbar base */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #9AE6B4 #E6FFFA;
+  }
+
+  /* Webkit Browsers */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #E6FFFA;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #38A169;
+    border-radius: 6px;
+  }
+
+  /* Dark Mode Scrollbar */
+  .dark .custom-scrollbar {
+    scrollbar-color: #22543D #1A202C;
+  }
+
+  .dark .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1A202C;
+  }
+
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #22543D;
+  }
+}
