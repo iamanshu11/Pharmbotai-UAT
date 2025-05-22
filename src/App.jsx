@@ -51,12 +51,7 @@ function AppContent() {
           isAuthenticated ? <ProfileSettings /> : <Navigate to="/login" />
         } 
       />
-      <Route 
-        path="/admin" 
-        element={
-          isAuthenticated ? <AdminLogin /> : <Navigate to="/login" />
-        } 
-      />
+      <Route path="/admin" element={<AdminLogin />} />
       <Route 
         path="/admin/dashboard" 
         element={
